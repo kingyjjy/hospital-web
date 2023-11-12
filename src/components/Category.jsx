@@ -1,8 +1,10 @@
 import React from 'react'
+import { useNavigate, Link, Routes, Route } from 'react-router-dom'
 
 const Category = () => {
   return (
-    <div className="container">
+    <div className="container mt-5">
+        <h2 className='text-center mb-5'>진료과 찾기</h2>
         <ul className="nav nav-tabs" id="myTab" role="tablist">
             <li className="nav-item" role="presentation">
                 <button className="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
@@ -117,7 +119,7 @@ const Category = () => {
                 </div>
             </div>
         </div>
-        </div>      
+        </div>   
     </div>
   )
 }

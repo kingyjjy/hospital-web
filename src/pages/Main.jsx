@@ -3,6 +3,8 @@ import TopNav from '../layout/TopNav'
 import Search from '../layout/Search'
 import Footer from '../layout/Footer'
 import Category from '../components/Category'
+import Info from '../components/Info'
+
 
 const Main = () => {
   return (
@@ -10,7 +12,7 @@ const Main = () => {
         <TopNav/>
         <Search/>
         <Category />
-        main
+        <Info />
         <Footer />
     </div>
   )
