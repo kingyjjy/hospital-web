@@ -125,6 +125,12 @@ a:hover{
   margin-right: 5px;
 }
 
+/* .time-text{
+  font-size: 23px;
+  font-weight: 800;
+  color: rgb(135, 120, 120);
+} */
+
 .title h1{
   font-size: 28px;
   border-bottom: 1px solid #d8d6d6;
@@ -142,13 +148,20 @@ a:hover{
 .p-transport h1{
   font-size: 23px;
   font-weight: 800;
-  color: brown;
-  border-top: 1px solid brown;
+  color: rgb(135, 120, 120);
   padding-top: 10px;
-  border-width: 50%;
-  
-
 }
+
+.p-transport h1::before{
+  content: "";
+  display: block;
+  width: 150px;
+  height: 3px;
+  margin-bottom: 16px;
+  background-color: #3E54AC;
+}
+
+
 
 .p-transport p{
   color:#807e7e;
@@ -161,3 +174,77 @@ a:hover{
 .bus, .parking{
   margin-top: 60px;
 }
+
+.reservation{
+  position: relative;
+  top: 100px;
+}
+
+.reserv-btn{
+  position:absolute;
+  padding: 10px 40px;
+  border-radius: 20px;
+  background-color: #3E54AC;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.reserv-btn> a{
+  color: #fff;
+}
+
+.p-transport li{
+  padding-bottom: 10px;
+}
+
+/* ReservList */
+
+.reserv-title{
+  font-weight: 800;
+}
+
+.reserv{
+  margin-top: 80px;
+}
+
+.list-box{
+  border: 1px solid #dfdbdb;
+  border-radius: 30px;
+  padding: 30px;
+  margin-top: 40px;
+  cursor: pointer;
+
+}
+
+.list-box:hover{
+
+}
+
+.list-title h4{
+  font-weight: 800;
+}
+
+.date{
+  color: #537FE7;
+  font-weight: 700;
+}
+
+.del-btn{
+  top: 20px;
+}
+
+.del-btn>button{
+  padding: 15px 40px;
+  border: 10px;
+  border-radius: 10px;
+  background-color: #3E54AC;
+  color: #fff;
+}
+
+.del-btn>button:hover{
+  background-color: #BFACE2;
+}
+
+
+

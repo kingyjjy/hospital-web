@@ -6,7 +6,9 @@ const TopNav = () => {
     <>
         <nav className="navbar navbar-expand-md">
             <div className="container">
-                <a href='#' className='col-4 link'>LOGO</a>
+                <a href='/' className='col-4 link'>
+                    <img src="images/logo.png" alt="" />
+                </a>
                 <button type="button" className="btn navbar-toggler" data-bs-toggle='collapse' data-bs-target='#topnav'>
                     <GiHamburgerMenu size={30}/> 
                 </button>

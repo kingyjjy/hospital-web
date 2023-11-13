@@ -30,7 +30,7 @@ const Category = () => {
             <div className="row">
                 <div className="col-4">
                     <ul>
-                        <li>굿모닝 내과</li>
+                        <li><a href="/detail">굿모닝 내과</a></li>
                         <li>삼성탑내과의원</li>
                         <li>아산내과의원</li>
                         <li>퍼스트내과의원</li>

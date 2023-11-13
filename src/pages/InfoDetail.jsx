@@ -1,13 +1,11 @@
 import React from 'react'
-import TopNav from '../layout/TopNav'
-import Footer from '../layout/Footer'
 import {HiOutlineLocationMarker} from 'react-icons/hi'
 import { BiTimeFive } from 'react-icons/bi'
+import MapContainer from '../components/MapContainer'
 
 const InfoDetail = () => {
   return (
     <>
-        <TopNav/>
         <div className="container">
             <div className="section">
                 <div className="title mt-5">
@@ -22,11 +20,20 @@ const InfoDetail = () => {
                         <div className="detail-box">
                             <h1 className='mb-5'>굿모닝 내과 의원</h1>
                             <p><span>주소 : </span>경기 김포시 김포한강4로 113 신한프라자 602호</p>
-                            <p className='mb-5'><span>전화번호 : </span>031-1234-1234</p>
-                            <p><span className='time'><BiTimeFive size={24}/></span>진료시간</p>
-                            <p><span>평일 : </span>08 : 30 ~ 19 : 00</p>
-                            <p><span>토요일 : </span>09 : 00 ~ 13 : 00</p>
-                            <p><span className='text-danger'>일요일 및 공휴일</span> 휴진</p>
+                            <p className='mb-5'><span>대표번호 : </span>031-1234-1234</p>
+                        </div>
+                        <div className="time-box d-flex">
+                            <div className="col-8">    
+                                <p className='time-text'><span className='time'><BiTimeFive size={24}/></span>진료 시간</p>
+                                <p><span>평일 : </span>08 : 30 ~ 19 : 00</p>
+                                <p><span>토요일 : </span>09 : 00 ~ 13 : 00</p>
+                                <p><span className='text-danger'>일요일 및 공휴일</span> 휴진</p>
+                            </div>
+                            <div className="col-4">
+                                <div className="reservation">
+                                    <button className='reserv-btn'><a href="/reserv-list">예약하기</a></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -60,8 +67,10 @@ const InfoDetail = () => {
                     </div>
                 </div>
             </div>
+            <div className="map mb-5">
+                <MapContainer/>
+            </div>
         </div>
-        <Footer/>
     </>
   )
 }
