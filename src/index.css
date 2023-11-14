@@ -1,3 +1,4 @@
+
 a, a:link{
   text-decoration: none;
   color: #333;
@@ -5,9 +6,7 @@ a, a:link{
 a:hover{
   color: #333;
 }
-li{
-  list-style: none;
-}
+
 .link{
   color: #333;
 }
@@ -16,19 +15,14 @@ li{
 .navbar-toggler{
   border: none !important;
 }
+.nav-item li{
+  list-style: none;
+}
 
 
 /* Search.css */
-/* .inputbox .form-control{
-  width:60% !important;
-  border-radius: 50px !important;
-}
-.inputbox .sicon{
-  right: 150px;
-  bottom: 3px;
-} */
 .inputbox{
-  width: 450px;
+  width: 550px;
   text-align: center;
   margin: 0 auto;
 }
@@ -38,5 +32,15 @@ li{
 }
 .inputbox .sicon{
   top: 10px;
-  left: 410px;
+  left: 510px;
+}
+
+/* .postmodal */
+.postmodal{
+  background: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }

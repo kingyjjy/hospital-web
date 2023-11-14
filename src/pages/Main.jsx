@@ -8,7 +8,7 @@ const Main = () => {
     <div>
         <TopNav/>
         <Search/>
-        main
+          main 
         <Footer />
     </div>
   )
