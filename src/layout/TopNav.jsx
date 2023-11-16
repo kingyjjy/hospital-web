@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {GiHamburgerMenu} from 'react-icons/gi'
 
 const TopNav = () => {
@@ -6,9 +7,9 @@ const TopNav = () => {
     <>
         <nav className="navbar navbar-expand-md">
             <div className="container">
-                <a href='/' className='col-4 link'>
+                <Link to='/' className='col-4 link'>
                     <img src="images/logo.png" alt="" />
-                </a>
+                </Link>
                 <button type="button" className="btn navbar-toggler" data-bs-toggle='collapse' data-bs-target='#topnav'>
                     <GiHamburgerMenu size={30}/> 
                 </button>
@@ -17,7 +18,7 @@ const TopNav = () => {
                         <li className="nav-item mx-4"><a href="#" className='nav-link'>Nav</a></li>
                         <li className="nav-item mx-4"><a href="#" className='nav-link'>Nav</a></li>
                         <li className="nav-item mx-4"><a href="#" className='nav-link'>Nav</a></li>
-                        <li className="nav-item mx-4"><a href="#" className=' nav-link'>마이 페이지</a></li>
+                        <li className="nav-item mx-4"><Link to="/reserv-list" className=' nav-link'>마이 페이지</Link></li>
                     </ul>
                     <div className='col-3'>
                         <a href="#" className='link btn btn-outline-dark'>로그인</a>  

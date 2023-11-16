@@ -6,6 +6,8 @@ import InfoDetail from './pages/InfoDetail';
 import TopNav from './layout/TopNav';
 import Footer from './layout/Footer';
 import ReservList from './pages/ReservList';
+import BookMark from './pages/BookMark';
+import Reservation from './pages/Reservation';
 
 
 const App = () => {
@@ -20,10 +22,23 @@ const App = () => {
             <Footer/>
           </>
         }/>
+        <Route path='/reservation' element={
+          <>
+            <TopNav/>
+            <Reservation/>
+          </>
+        }/>
         <Route path='/reserv-list' element={
           <>
             <TopNav/>
             <ReservList/>
+            <Footer/>
+          </>
+        }/>
+        <Route path='/bookmark' element={
+          <>
+            <TopNav/>
+            <BookMark/>
             <Footer/>
           </>
         }/>

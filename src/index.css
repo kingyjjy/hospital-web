@@ -69,17 +69,7 @@ a:hover{
   color:#ac7070;
 }
 
-/* info */
-
-.info p{
-  opacity: 0.8;
-}
-
-
-.card-body{
-  position: relative;
-  justify-content: center;
-}
+/* infoCard.jsx - main */
 
 .card-title{
   white-space: nowrap;
@@ -90,7 +80,6 @@ a:hover{
 }
 
 .card-text{
-  /* white-space: nowrap; */
   white-space: pre-wrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -102,16 +91,7 @@ a:hover{
   display: flex;
   justify-content: center;
 }
-.carousel-inner{
-  display: flex;
-  align-items: center;
-}
 
-.carousel-itemcarousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /* InfoDetail */
 .detail-img{
@@ -121,17 +101,11 @@ a:hover{
   border-radius: 50px;
 }
 
-.time{
+.time-text>.time{
   margin-right: 5px;
 }
 
-/* .time-text{
-  font-size: 23px;
-  font-weight: 800;
-  color: rgb(135, 120, 120);
-} */
-
-.title h1{
+.detail-title h1{
   font-size: 28px;
   border-bottom: 1px solid #d8d6d6;
   padding-bottom: 15px;
@@ -161,8 +135,6 @@ a:hover{
   background-color: #3E54AC;
 }
 
-
-
 .p-transport p{
   color:#807e7e;
 }
@@ -175,12 +147,16 @@ a:hover{
   margin-top: 60px;
 }
 
-.reservation{
+.p-transport li{
+  padding-bottom: 10px;
+}
+
+.detail-reservation{
   position: relative;
   top: 100px;
 }
 
-.reserv-btn{
+.detail-reservation>.reserv-btn{
   position:absolute;
   padding: 10px 40px;
   border-radius: 20px;
@@ -190,51 +166,52 @@ a:hover{
   border: none;
 }
 
-.reserv-btn> a{
+.detail-reservation>.reserv-btn> a{
   color: #fff;
 }
 
-.p-transport li{
-  padding-bottom: 10px;
-}
 
-/* ReservList */
 
-.reserv-title{
+
+/* ReservList 예약내역 */
+
+.reserv-list>.reserv-title{
   font-weight: 800;
 }
 
-.reserv{
+.reserv-list{
   margin-top: 80px;
 }
 
-.list-box{
+.reserv-list>.list-box{
   border: 1px solid #dfdbdb;
   border-radius: 30px;
   padding: 30px;
   margin-top: 40px;
   cursor: pointer;
+  transition: all 0.2s;
 
 }
 
-.list-box:hover{
-
+.reserv-list>.list-box:hover{
+  transform: scale(1.1);
+  background-color:#ececec;
 }
 
-.list-title h4{
+.reserv-list>.list-title h4{
   font-weight: 800;
 }
 
-.date{
+.reserv-list>.date{
   color: #537FE7;
   font-weight: 700;
 }
 
-.del-btn{
+.reserv-list>.del-btn{
   top: 20px;
 }
 
-.del-btn>button{
+.list-del>button{
   padding: 15px 40px;
   border: 10px;
   border-radius: 10px;
@@ -242,9 +219,178 @@ a:hover{
   color: #fff;
 }
 
-.del-btn>button:hover{
+.list-del>button:hover{
   background-color: #BFACE2;
 }
 
+
+
+
+/* reservation */
+.reservation{
+  width: 100%;
+  height: 600px;
+  border-radius: 40px;
+  background-color: #fff;
+}
+
+.reserv-title{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.reserv-box{
+  margin : 40px 50px;
+}
+
+.reserv-box div{
+  margin-bottom: 20px;
+}
+
+.reserv-box div::after{
+  content: "";
+  border-bottom: 1px solid #777;
+}
+
+.reserv-box label{
+  /* margin-right: 20px; */
+  font-weight: 800;
+  font-size: 20px;
+  width: 20%;
+  /* border: 1px solid #333; */
+}
+
+.reserv-box input{
+  border-radius: 10px;
+  border-color: #cdc9c9;
+  width: 40%;
+}
+
+.tel_wrap input{
+  width: 20%;
+  margin-left: 10px;
+}
+
+.hyphen{
+  margin-left: 10px;
+}
+
+.reserv-success{
+  /* border: 1px solid #333; */
+  display: flex;
+  justify-content: center;
+}
+
+.reserv-success button{
+  padding: 15px 35px;
+  border-radius: 10px;
+  background-color: #3E54AC;
+  color: #fff;
+  border: none;
+}
+
+.reserv-success button:hover{
+  background-color: #BFACE2;
+}
+
+
+/* reservation 예약창 */
+.res{
+  width: 100%;
+  background-color: #fff;
+  margin-top: 50px;
+
+}
+
+.res-box> .res-title{
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+
+.res-box>.res-hos-name{
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.res-box>.res-hos-name input{
+  background-color: #e8e7e7;
+}
+
+.res-box>.res-hos-name input:focus{
+  outline:none;
+}
+
+.res>.res-box{
+  padding-left: 80px;
+  padding-right: 80px;
+  border: 1px solid #c5c4c4;
+  border-radius: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.res>.res-box input{
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #c5c4c4;
+}
+
+.res-box>.res-success{
+  display: flex;
+  justify-content: center;
+}
+
+.res-box>.res-success button{
+  padding: 15px 35px;
+  border-radius: 10px;
+  background-color: #3E54AC;
+  color: #fff;
+  border: none;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.res-box>.res-success button:hover{
+  background-color: #BFACE2;
+}
+/*
+
+.info{
+  display: flex;
+}
+
+.info select{
+  margin-left: 7px;
+}
+
+.info select{
+  border-radius: 5px;
+  border-color: #c5c4c4;
+  padding: 15px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.info select:first-child{
+  margin-left: 0px;
+}
+
+.info select::-webkit-scrollbar{
+  width: 10px;
+}
+
+.info select::-webkit-scrollbar-thumb{
+  background-color: #b6b6b6;
+  border-radius: 3px;
+}
+
+.info select select::-webkit-scrollbar-track{
+  background-color: #ebe9e9;
+  border-radius: 6px;
+} */
 
 

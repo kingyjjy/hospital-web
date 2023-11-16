@@ -3,7 +3,7 @@ import React from 'react'
 const ReservList = () => {
   return (
     <div className="container">
-        <div className="reserv">
+        <div className="reserv-list">
             <h1 className="reserv-title">예약 내역</h1>
             {/*loop*/}
             <div className="list-box d-flex">
@@ -19,8 +19,7 @@ const ReservList = () => {
                     </div>
                     </div>
                     <div className="col-2 relative">
-
-                        <div className="del-btn mt-4 absolute">
+                        <div className="list-del mt-4 absolute">
                             <button type='button'>예약 취소</button>
                         </div>
                     </div>            
@@ -41,7 +40,7 @@ const ReservList = () => {
                     </div>
                     <div className="col-2 relative">
 
-                        <div className="del-btn mt-4 absolute">
+                        <div className="list-del mt-4 absolute">
                             <button type='button'>예약 취소</button>
                         </div>
                     </div>            
@@ -62,7 +61,7 @@ const ReservList = () => {
                     </div>
                     <div className="col-2 relative">
 
-                        <div className="del-btn mt-4 absolute">
+                        <div className="list-del mt-4 absolute">
                             <button type='button'>예약 취소</button>
                         </div>
                     </div>            

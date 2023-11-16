@@ -1,24 +1,26 @@
-import React from 'react'
+import React , {useState}from 'react'
 import {HiOutlineLocationMarker} from 'react-icons/hi'
 import { BiTimeFive } from 'react-icons/bi'
 import MapContainer from '../components/MapContainer'
+import { Link } from 'react-router-dom'
+import { IoBookmarksOutline } from 'react-icons/io5'
 
 const InfoDetail = () => {
   return (
     <>
         <div className="container">
             <div className="section">
-                <div className="title mt-5">
+                <div className="detail-title mt-5">
                     <h1>병원 상세</h1>
                 </div>
-                <div className="row">
+                <div className="row hos-detail">
                     <div className="col-4 detail-img mt-5">
                         <img src='images/hospital.jpg' alt='hospital' style={{width:"350px", height:"350px"}}/>
                     </div>
                     <div className="col-1"></div>
                     <div className="col-7 mt-5">
                         <div className="detail-box">
-                            <h1 className='mb-5'>굿모닝 내과 의원</h1>
+                            <h1 className='mb-5'>굿모닝 내과 의원<span className='p-2'><a href="/bookmark"><IoBookmarksOutline size={24}/></a></span></h1>
                             <p><span>주소 : </span>경기 김포시 김포한강4로 113 신한프라자 602호</p>
                             <p className='mb-5'><span>대표번호 : </span>031-1234-1234</p>
                         </div>
@@ -30,8 +32,8 @@ const InfoDetail = () => {
                                 <p><span className='text-danger'>일요일 및 공휴일</span> 휴진</p>
                             </div>
                             <div className="col-4">
-                                <div className="reservation">
-                                    <button className='reserv-btn'><a href="/reserv-list">예약하기</a></button>
+                                <div className="detail-reservation">
+                                    <button className='reserv-btn'><Link to="/reservation">예약하기</Link></button>
                                 </div>
                             </div>
                         </div>
