@@ -1,6 +1,7 @@
 import React from 'react'
 import {FcGoogle} from 'react-icons/fc'
 import {SiKakaotalk, SiFacebook} from 'react-icons/si'
+import { Link } from 'react-router-dom'
 const Login = () => {
   return (
     <form>
@@ -27,16 +28,16 @@ const Login = () => {
                   <input type="checkbox" id="idcheck" className="form-check-input" />
                   <label htmlFor="idcheck">아이디 기억하기</label>
                 </div>
-                <a href="/register" className="text-end mx-5">회원가입</a>
+                <Link to="/register" className="text-end mx-5">회원가입</Link>
                 <div className='d-flex justify-content-center mt-3'>
                   <button type="submit" className="btn btn-secondary">로그인</button>
                 </div>
                 <hr />
                 <p className="text-center">Sign in with :</p>
                 <div className="d-flex justify-content-between mx-5">
-                  <a href=""><FcGoogle size={30}/></a>
-                  <a href=""><SiKakaotalk size={30} color='yellow'/></a>
-                  <a href=""><SiFacebook size={30} color='darkblue'/></a>
+                  <Link to=""><FcGoogle size={30}/></Link>
+                  <Link to=""><SiKakaotalk size={30} color='yellow'/></Link>
+                  <Link to=""><SiFacebook size={30} color='darkblue'/></Link>
                 </div>
               </div>
             </div>

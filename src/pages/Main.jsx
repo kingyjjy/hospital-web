@@ -4,11 +4,12 @@ import Search from '../layout/Search'
 import Footer from '../layout/Footer'
 
 const Main = () => {
+  
   return (
     <div>
         <TopNav/>
         <Search/>
-          main 
+          main
         <Footer />
     </div>
   )

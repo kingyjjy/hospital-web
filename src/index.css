@@ -18,6 +18,12 @@ a:hover{
 .nav-item li{
   list-style: none;
 }
+.sidenav{
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  overflow-x: hidden;
+}
 
 
 /* Search.css */
